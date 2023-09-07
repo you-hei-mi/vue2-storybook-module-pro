@@ -1,5 +1,5 @@
 {
-  "name": "vue2-storybook-module-pro",
+  "name": "k-field-module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "package": "vue-cli-service build --target lib ./src/package.js --name my-storybook-ui --dest my-storybook-ui"
+    "package": "vue-cli-service build --target lib ./src/package.js --name k-field-ui --dest k-field-ui"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -33,7 +33,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-storybook": "^0.6.13",
     "eslint-plugin-vue": "^8.0.3",
-    "my-storybook-ui": "^1.0.0",
+    "k-field-ui": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.66.1",

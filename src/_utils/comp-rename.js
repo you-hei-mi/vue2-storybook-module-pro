@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2023-09-07 10:30:27
- * @FilePath: \vue2-storybook-module-pro\src\_utils\comp-rename.js
+ * @FilePath: \k-field-module\src\_utils\comp-rename.js
  */
 import capitalize from "lodash/capitalize";
 import { prefix }from '../config'

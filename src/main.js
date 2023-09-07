@@ -3,12 +3,12 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2023-09-06 16:24:56
- * @FilePath: \vue2-storybook-module-pro\src\main.js
+ * @FilePath: \k-field-module\src\main.js
 */
 import Vue from 'vue'
 import App from './App.vue'
-import MyStorybookUi from 'my-storybook-ui'
-import 'my-storybook-ui/my-storybook-ui.css'
+import MyStorybookUi from 'k-field-ui'
+import 'k-field-ui/k-field-ui.css'
 Vue.use(MyStorybookUi)
 
 import * as components from './components';

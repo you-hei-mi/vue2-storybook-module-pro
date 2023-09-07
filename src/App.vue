@@ -3,11 +3,11 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2023-09-07 09:26:20
- * @FilePath: \vue2-storybook-module-pro\src\App.vue
+ * @FilePath: \k-field-module\src\App.vue
 -->
 <template>
   <div id="app">
-    <my-button label="这是 my-storybook-ui 组件按钮"></my-button>
+    <my-button label="这是 k-field-ui 组件按钮"></my-button>
   </div>
 </template>
 
