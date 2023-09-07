@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2023-09-07 09:26:20
- * @FilePath: \vue2-storybook-module\src\App.vue
+ * @FilePath: \vue2-storybook-module-pro\src\App.vue
 -->
 <template>
   <div id="app">
