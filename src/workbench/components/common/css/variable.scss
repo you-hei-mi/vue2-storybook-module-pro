@@ -1,0 +1,402 @@
+/* 底色
+-------------------------- */
+$color-default : #FFFFFF;
+$color-black : #000000;
+
+/* $color-primary                     : #AFA37E; */
+$color-primary : #177ddc;
+$color-primary-light : #EAE5D4;
+$color-primary-darken : #978755;
+
+$color-success : #2774FF;
+$color-warning : #FFB403;
+$color-danger : #FF5757;
+$color-error : #FF001F;
+
+/* 导航样式
+$------------------------ */
+$nav-fixed-top : 64px;
+$nav-background-color : #FFFFFF;
+$nav-height : 46px;
+
+/* 链接
+$------------------------ */
+$color-link-base : #2774FF;
+
+
+/* 字体颜色
+$------------------------ */
+$color-text-base : #000;
+$color-text-second : #333;
+$color-text-third : #666;
+$color-text-light : #999;
+$color-text-placeholder : #999;
+$color-text-disabled : #D8D8D8;
+$color-text-selected : #FF8A00;
+
+/* 字体大小
+$------------------------ */
+$font-size-base : 14px;
+$font-size-small : 12px;
+$font-size-large : 14px;
+$font-size-larger : 16px;
+$font-size-largest : 18px;
+$font-weight-medium : 500;
+$font-family : OpenSans,
+Arial,
+Helvetica,
+PingFang SC,
+Hiragino Sans GB,
+Microsoft YaHei,
+SimSun,
+sans-serif;
+$font-line-height : 1;
+
+/* 图标颜色
+$------------------------ */
+$color-icon-base : #999;
+$color-icon-info : $color-primary;
+$color-icon-success : $color-success;
+$color-icon-error : $color-danger;
+$color-icon-warning : $color-warning;
+
+/* 背景颜色
+$------------------------ */
+$background-color-base : #f0f2f5;
+$background-color-empty : #F2F2F2;
+$background-color-hover : #F7F7F7;
+$background-color-light : #FBFBFB;
+$background-color-lighter : #FAFAFA;
+$background-color-active : #E6F2FF;
+
+/* 线条颜色
+$------------------------ */
+$border-radius : 4px;
+$border-color-base : #FFFFFF;
+$border-color-light : #D8D8D8;
+$border-color-lighter : #EEEEEE;
+$border-color-active : #217fdf;
+$border-base-style : 1px solid $border-color-base;
+$border-base-style-active : 1px solid $border-color-active;
+
+/* 线条阴影颜色
+$------------------------ */
+$box-shadow-color-base : #DDDDDD;
+$box-shadow-color-light : #D8D8D8;
+$box-shadow-color-lighter : #EEEEEE;
+$box-shadow-color-active : #0C6BD8;
+$box-shadow-color-style : 0px 0px 8px 0px $box-shadow-color-base;
+$box-shadow-color-style-active : 0px 0px 8px 0px $box-shadow-color-active;
+
+/* 布局样式
+$------------------------ */
+$layout-background : #F8F8F8;
+$layout-safe-width : 1200px;
+$layout-better-width : 1440px;
+$layout-operation-background-color : #FFFFFF;
+$layout-grid-background-color : rgba(54, 54, 54, 0.2);
+$layout-operation-width : 50%;
+$layout-operation-max-width : 300px;
+$layout-handle-height : 36px;
+$layout-handle-background : url("data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjYiIGhlaWdodD0iNiI+PHBhdGggZD0iTTYgNkgwVjQuMmg0LjJWMEg2djZ6IiBvcGFjaXR5PSIuMzAyIi8+PC9zdmc+");
+$layout-handle-background-width : 20px;
+
+/* 面板样式
+$------------------------ */
+$workshop-min-width : 980px;
+/*面板区最小宽度*/
+$workshop-height : calc(100vh - 110px);
+$workshop-height-125 : calc(100vh - -68px);
+$workshop-height-150 : calc(100vh - -174px);
+$workshop-height-175 : calc(100vh - -240px);
+$workshop-height-200 : calc(100vh - -279px);
+/*面板区高度*/
+
+
+// ----------------- 主题 -----------------
+// 黑色
+// @import './theme/black.scss';
+
+// 弹窗样式
+.el-dialog {
+  .el-dialog__body {
+    .drawer_content {
+      .drawer_footer {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// 组件信息展示
+.card-type-content {
+  cursor: default;
+  padding: 8px;
+
+  .wrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding-left: 4px;
+
+    .sample-card {
+      display: flex;
+      flex: 0 0 auto;
+      position: relative;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px 0 rgba(31, 31, 31, 0.5), 0 0 2px 0 rgba(31, 31, 31, .2);
+
+      .sample-card-img-recent_projects {
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 80px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTMwIDgwIiB3aWR0aD0iMTMwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48bWFzayBpZD0iYSIgaGVpZ2h0PSIzNCIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjkwIiB4PSIyMCIgeT0iMTUiPjxwYXRoIGQ9Im0yMCAxNS4wODUgOTAtLjA4NXYzNGgtOTB6IiBmaWxsPSIjZmZmIi8+PC9tYXNrPjxtYXNrIGlkPSJiIiBoZWlnaHQ9IjEzIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMTMiIHg9Ijk3IiB5PSI1MyI+PHBhdGggZD0ibTEwMy41IDUzYzMuNTkgMCA2LjUgMi45MSA2LjUgNi41cy0yLjkxIDYuNS02LjUgNi41LTYuNS0yLjkxLTYuNS02LjUgMi45MS02LjUgNi41LTYuNXoiIGZpbGw9IiNmZmYiLz48L21hc2s+PHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMyAwaDEyNGMxLjY1NyAwIDMgMS4zNDMgMyAzdjc0YzAgMS42NTctMS4zNDMgMy0zIDNoLTEyNGMtMS42NTcgMC0zLTEuMzQzLTMtM3YtNzRjMC0xLjY1NyAxLjM0My0zIDMtM3oiIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGQ9Im0yMzYuMzk2IDM5LjY4M2MtMTAuNDItLjc2OC05LjEwNi0xLjU4OS0xMy4yMDMtMy4zMDUtNC4wOTctMS43MTUtMTIuMzc4IDEuNjk1LTIxLjI3OCAxLjUzMS0xMi41MS0uMjMtMTUuMzY0LTEuODczLTMxLjgyNS03LjM4LTE2LjQ2LTUuNTA1LTIyLjUxMy0zLjA3NC0zNC41NjQuNTgtOC4wMzMgMi40MzYtMTIuMDY1IDQuMjMzLTEyLjA5NiA1LjM5MmwtMTYuMi03Ljc3MmMtMi45NC0xLjQxMS02LjM1NS0xLjQ0NC05LjMyMy0uMDktNC45NCAyLjI1My04Ljk0IDMuMjYzLTEyLjAwMiAzLjAzLTUuOTA2LS40NS0xMi42MDItOC4xNjMtMjAuMzY5LTguODc4LTcuNzY2LS43MTUtMTEuNDA4IDQuNTc5LTIxIDMuNjA5LTkuNTkxLS45Ny05LjkwMy0xMC40NzYtMjguMTYzLTEwLjQ3Ni0xMi41OTAwMSAwLTkzLjY4MiAzMi42NTktMTEyLjkyNCAyNC4xNi0xOS4yNDItOC40OTctMjIuMTg2IDEuMTI2LTI0Ljk4MiAxLjI0LTIuNzk1LjExMi03LjI4NS4wNDMtNy4yODUuMDQzdjExLjkxOWgzOTMuMTU4di0xNC4wNzZzLS45MjEtLjI5LTQuNjA2LS40NDNjLS43OS0uMjIzLTEyLjkyIDEuNjgzLTIzLjMzOC45MTZ6IiBmaWxsPSIjZThmMmZjIiBzdHJva2U9IiMzMzhmZTUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0yMS41IDY0aDIyYy44MjggMCAxLjUuNjcyIDEuNSAxLjVzLS42NzIgMS41LTEuNSAxLjVoLTIyYy0uODI4IDAtMS41LS42NzItMS41LTEuNXMuNjcyLTEuNSAxLjUtMS41em0wLThoNDJjLjgyOCAwIDEuNS42NzIgMS41IDEuNXMtLjY3MiAxLjUtMS41IDEuNWgtNDJjLS44MjggMC0xLjUtLjY3Mi0xLjUtMS41cy42NzItMS41IDEuNS0xLjV6IiBmaWxsPSIjZDBkNGQ4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48ZyBtYXNrPSJ1cmwoI2IpIj48cGF0aCBkPSJtMTAzLjUgNTNjMy41OSAwIDYuNSAyLjkxIDYuNSA2LjVzLTIuOTEgNi41LTYuNSA2LjUtNi41LTIuOTEtNi41LTYuNSAyLjkxLTYuNSA2LjUtNi41eiIgZmlsbD0iI2VhZjNmYyIvPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTEwMy41IDYxLjE3NmMyLjQzMyAwIDUuNDg4IDEuMzcyIDUuNDg4IDIuMjN2MS41NTFsLS43ODQuNzc2Yy0xLjU2OC42Mi0zLjEzNi45MzEtNC43MDQuOTMxcy0zLjEzNi0uMzEtNC43MDQtLjkzbC0uNzg0LS43Nzd2LTEuNTUxYzAtLjg1OCAzLjA2OC0yLjIzIDUuNDg4LTIuMjN6bTAtNi4yNzJjMS4zMDcgMCAyLjM1MiAxLjE1IDIuMzUyIDIuNTV2LjM4OGMwIDEuMzQ3LTEuNTY4IDIuNTUtMi4zNTIgMi41NXMtMi4zNTItMS4yMDYtMi4zNTItMi41NXYtLjM4OGMwLTEuNCAxLjA0NS0yLjU1IDIuMzUyLTIuNTV6IiBmaWxsPSIjMzM4ZmU1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9zdmc+);
+        position: relative;
+        left: 0;
+        top: 0;
+
+        .el-image {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: $color-default;
+
+          .el-image__inner {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .intro {
+      margin-left: 20px;
+      margin-top: 5px;
+
+      .card-title {
+        text-align: left;
+        font-weight: 500;
+        line-height: 1;
+        display: flex;
+        height: 22px;
+        align-items: center;
+        font-size: 15px;
+        color: $color-text-base;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+
+      .card-desc {
+        display: inline-block;
+        margin-top: 5px;
+        text-align: left;
+        line-height: 1.5;
+        font-size: 12px;
+        color: $color-text-third;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        width: 100%;
+        white-space: break-spaces;
+      }
+    }
+  }
+}
+
+// 工作台样式
+.k_workshop {
+  color: $color-black;
+  min-width: $workshop-min-width;
+  background-color: $background-color-base;
+//   margin-top: $nav-height;
+
+  .k_workshop_content_box {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 100%;
+
+    .content_box {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: initial;
+      min-height: $workshop-height;
+      // height: $workshop-height;
+      overflow: revert;
+      background: $background-color-base;
+
+      .content_box_bg {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        height: calc(100% - 4px);
+        width: 100%;
+        background: $background-color-empty;
+        background-image: linear-gradient(0deg, $layout-background 4px, transparent 0.1em), linear-gradient(90deg, $layout-background 4px, transparent 0.1em);
+        // background-size: calc((100% / 24) - 0.1px) 74px;
+        // background-size: calc((100% / 24) - 0.1px) calc((100vh - 118px) / 11);
+        background-size: calc((100% / 38) - 0.05px) calc((100vh - 112px) / 21);
+        background-attachment: local, scroll;
+        overflow-y: scroll;
+      }
+
+      // .vue-grid-layout {
+      //   height: 100% !important;
+      // }
+      .ViewGridLayout {
+        border: $border-base-style;
+        background: $border-color-base;
+
+        &:hover {
+          box-shadow: $box-shadow-color-style;
+        }
+      }
+
+      .grid-item-active {
+        z-index: 999 !important;
+
+        .ViewGridLayout {
+          &.active {
+            border: $border-base-style-active;
+            box-shadow: $box-shadow-color-style-active;
+          }
+        }
+      }
+
+      .vue-grid-item:hover {
+        z-index: 1999 !important;
+      }
+
+      ::v-deep .vue-grid-item.vue-grid-placeholder {
+        background: $layout-grid-background-color;
+        transition-duration: 100ms;
+        z-index: 2;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+
+      ::v-deep .vue-resizable-handle {
+        width: $layout-handle-background-width;
+        height: $layout-handle-background-width;
+        background-image: $layout-handle-background;
+        z-index: 100;
+      }
+
+      .k_workshop_empty {
+        height: 100%;
+        text-align: center;
+        padding-top: 200px;
+
+        ::v-deep .el-empty__image {
+          width: 230px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  // ::v-deep .el-drawer__wrapper{
+  //   .drawer_content{
+  //     display: flex;
+  //     flex-direction: column;
+  //     height: 100%;
+  //     .drawer_com{
+  //       flex: 1;
+  //     }
+  //   }
+  // }
+}
+
+
+// ----------------------------- 缩放 125% 开始 -----------------------------
+.k_workshop__zoom_125{
+  &.k_workshop {
+    .k_workshop_content_box {
+      .content_box {
+        min-height: $workshop-height-125;
+        .content_box_bg {
+          background-size: calc((100% / 38) - 0.05px) calc((100vh - 112px) / 16.11);
+        }
+      }
+    }
+  }
+}
+// ----------------------------- 缩放 125% 结束 -----------------------------
+
+
+
+// ----------------------------- 缩放 150% 开始 -----------------------------
+.k_workshop__zoom_150{
+    &.k_workshop {
+    .k_workshop_content_box {
+      .content_box {
+        min-height: $workshop-height-150;
+        .content_box_bg {
+          background-size: calc((100% / 38) - 0.05px) calc((100vh - 112px) / 12.85) !important;
+        }
+      }
+    }
+  }
+}
+// ----------------------------- 缩放 150% 结束 -----------------------------
+
+
+
+// ----------------------------- 缩放 175% 开始 -----------------------------
+.k_workshop__zoom_175{
+    &.k_workshop {
+    .k_workshop_content_box {
+      .content_box {
+        min-height: $workshop-height-175;
+        .content_box_bg {
+          background-size: calc((100% / 38) - 0.05px) calc((100vh - 112px) / 10.56) !important;
+        }
+      }
+    }
+  }
+}
+// ----------------------------- 缩放 175% 结束 -----------------------------
+
+
+
+// ----------------------------- 缩放 200% 开始 -----------------------------
+.k_workshop__zoom_200{
+    &.k_workshop {
+      .k_workshop_content_box {
+        .content_box {
+          min-height: $workshop-height-200;
+          .content_box_bg {
+            background-size: calc((100% / 38) - 0.05px) calc((100vh - 50.2px) / 10.56) !important;
+          }
+        }
+      }
+    }
+  }
+  // ----------------------------- 缩放 200% 结束 -----------------------------
+
+// 快捷键样式
+.shortcut_key_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  z-index: -100;
+}

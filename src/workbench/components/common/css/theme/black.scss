@@ -1,0 +1,49 @@
+/* 底色
+-------------------------- */
+$color-default : #1E1D21;
+$color-black : #000000;
+
+/* 导航样式
+$------------------------ */
+$nav-background-color : #151618;
+
+
+/* 链接
+$------------------------ */
+$color-link-base : #2774FF;
+
+
+/* 字体颜色
+$------------------------ */
+$color-text-primary : #333333;
+$color-text-base : $color-text-primary;
+$color-text-second : $color-text-primary;
+$color-text-third : #909399;
+
+/* 背景颜色
+$------------------------ */
+$background-color-base : #000000;
+$background-color-empty : #161517;
+$background-color-hover : #2B343C;
+
+/* 线条颜色
+$------------------------ */
+$border-color-base : #c0c4cc;
+$border-color-active : rgba(135, 135, 135, 0.5);
+$border-base-style : 1px solid $background-color-base;
+$border-base-style-active : 1px solid $border-color-active;
+
+/* 线条阴影颜色
+$------------------------ */
+$box-shadow-color-base : #1E1D21;
+$box-shadow-color-active : #0C6BD8;
+$box-shadow-color-style : 0px 0px 8px 0px $box-shadow-color-base;
+$box-shadow-color-style-active : 0px 0px 8px 0px $box-shadow-color-active;
+
+/* 布局样式
+$------------------------ */
+$layout-background : #000000;
+$layout-operation-background-color : transparent;
+$layout-grid-background-color : rgba(255, 255, 255, 0.2);
+$layout-handle-background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAFqADAAQAAAABAAAAFgAAAAA/6RFgAAAAVElEQVQ4EWNgoBL4//9/AxDDQAMTlczFMGbUYHiQjAbFaFDAQwDOGE0Vo0EBDwE4g2apggVY5DfAraGM4YCsnQXIqUcWoBabdkEBdGEjtVyJZM4BABfYFKAfYImUAAAAAElFTkSuQmCC");
+$layout-handle-background-width : 14px;

@@ -1,5 +1,15 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: zou hua
+ * @Date: 2023-09-07 17:21:01
+ * @FilePath: \vue2-storybook-module-pro\src\button\button.vue
+-->
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+    <div>
+        <img src="@/_docs/assets/accessibility.png" alt="">
+        <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+    </div>
 </template>
 
 <script>

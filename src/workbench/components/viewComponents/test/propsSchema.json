@@ -1,0 +1,24 @@
+{
+    "id": "test",
+    "title": "测试代办事项",
+    "description": "可以显示代办事项情况",
+    "type": "Table",
+    "default": {
+        "comName": "代办事项",
+        "comDesc": "可以显示代办事项情况",
+        "enable": true,
+        "isDelete": true,
+        "isDraggable": true,
+        "isResizable": true,
+        "layoutH": 5,
+        "layoutW": 12,
+        "maxH": 11,
+        "maxW": 24,
+        "minH": 5,
+        "minW": 5,
+        "comImg": "list",
+        "comTypeValue": "common",
+        "query":true
+    },
+    "version": "0.0.1"
+}
