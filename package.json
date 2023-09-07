@@ -8,8 +8,7 @@
     "lint": "vue-cli-service lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "package": "vue-cli-service build --target lib ./src/package.js --name my-storybook-ui --dest my-storybook-ui",
-    "aaa": "node ./src/package.js"
+    "package": "vue-cli-service build --target lib ./src/package.js --name my-storybook-ui --dest my-storybook-ui"
   },
   "dependencies": {
     "core-js": "^3.8.3",
