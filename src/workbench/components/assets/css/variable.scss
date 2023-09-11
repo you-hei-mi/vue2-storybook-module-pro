@@ -115,7 +115,24 @@ $workshop-height-200 : calc(100vh - -279px);
 
 // ----------------- 主题 -----------------
 // 黑色
-// @import './theme/black.scss';
+@import './theme/black.scss';
+
+// 工作台变量
+$--top-tags-bgs: #ffffff;
+$--color-black3: #F5F6F8;
+$--color-dcdada: #666;
+$--top-tags-bgs: #ffffff;
+$--k-workshop-bg: #e6e6e6;
+$--k-workshop-bg1: #f6f6f6;
+$--k-workshop-border: #FFFFFF;
+$--color-text-primary: #333333;
+$--k-workshop-checked-bg: #f5f6f8;
+$--background-color-base: #ECEDEE;
+
+$--color-primary: #0C6BD8;
+$--el-menu-bg-active: #ECEDEE;
+$--el-menu-color-active: #000;
+$--border-color-lighter: #ECEDEE;
 
 // 弹窗样式
 .el-dialog {

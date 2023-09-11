@@ -601,7 +601,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 
 .edit_dialog {
   ::v-deep .el-dialog__body {

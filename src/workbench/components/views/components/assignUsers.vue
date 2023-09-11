@@ -361,7 +361,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 .assignUsers_dialog {
   .drawer_content {
     display: flex;

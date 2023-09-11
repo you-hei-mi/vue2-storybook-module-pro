@@ -4,9 +4,9 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2022-04-21 15:30:24
- * @LastEditTime: 2023-08-19 14:23:46
+ * @LastEditTime: 2023-09-11 17:49:17
  * @LastEditors: Please set LastEditors
- * @FilePath: \k-cbm\packages\components\b-workbench\src\components\views\layoutAdmin\edit.vue
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\views\layoutAdmin\edit.vue
 -->
 
 <template>
@@ -187,7 +187,7 @@ import SelectCard from '../../components/SelectCard' // 选择卡片
 import SetCard from '../../components/SetCard' // 设置卡片属性
 import RenameDialog from '../components/RenameDialog' // 设置卡片属性
 import { panelConfig, componentData, URLConfig } from '../../config/tools' // 模型默认配置文件
-import { getUUID, detectZoom } from '../../common/js/utils' // 模型默认配置文件
+import { getUUID, detectZoom } from '../../assets/js/utils' // 模型默认配置文件
 import { GridLayout, GridItem } from 'vue-grid-layout'
 import * as api from '@/api/workbench/index' // 接口
 
@@ -287,12 +287,15 @@ export default {
     }
 
     // 从 header 编辑进入时
-    const { pathKey = '', pathCopyKey = '', type = '' } = this.$route.query
-    if (!type && (!pathKey || !pathCopyKey)) {
-      // 获取当前工作台走马灯的index
-      const workbenchCarouselIndex = sessionStorage.getItem('workbenchCarouselIndex') ? JSON.parse(sessionStorage.getItem('workbenchCarouselIndex')) : {}
-      this.templateId = workbenchCarouselIndex.tempId || ''
-      this.templateObj = workbenchCarouselIndex.tempObj || {}
+    console.log('从 header 编辑进入时', this.$route)
+    if(this.$route){
+        const { pathKey = '', pathCopyKey = '', type = '' } = this.$route.query
+        if (!type && (!pathKey || !pathCopyKey)) {
+          // 获取当前工作台走马灯的index
+          const workbenchCarouselIndex = sessionStorage.getItem('workbenchCarouselIndex') ? JSON.parse(sessionStorage.getItem('workbenchCarouselIndex')) : {}
+          this.templateId = workbenchCarouselIndex.tempId || ''
+          this.templateObj = workbenchCarouselIndex.tempObj || {}
+        }
     }
     // 页面初始化
     this.initData()
@@ -902,20 +905,24 @@ export default {
         // console.log(data)
         if (json.isDefTemp === '1') {
           // 返回模板管理
-          this.$router.push({
-            path: URLConfig.template,
-            query: {
-              type: 'saveComplete'
-            }
-          })
+          if(this.$router){
+              this.$router.push({
+                path: URLConfig.template,
+                query: {
+                  type: 'saveComplete'
+                }
+              })
+          }
         } else {
           // 返回模板预览
-          this.$router.push({
-            path: URLConfig.preview,
-            query: {
-              type: 'saveComplete'
-            }
-          })
+          if(this.$router){
+              this.$router.push({
+                path: URLConfig.preview,
+                query: {
+                  type: 'saveComplete'
+                }
+              })
+          }
         }
       }).catch(() => {
         this.addTempLoading = false
@@ -970,5 +977,5 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 </style>

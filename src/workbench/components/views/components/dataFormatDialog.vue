@@ -155,5 +155,5 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 </style>

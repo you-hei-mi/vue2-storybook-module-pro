@@ -3,13 +3,13 @@
  * @Version: 1.0
  * @Author: wuxr
  * @Date: 2022-06-10 18:59:06
- * @LastEditTime: 2023-08-21 15:11:06
+ * @LastEditTime: 2023-09-11 18:37:45
  * @LastEditors: Please set LastEditors
- * @FilePath: \k-cbm\packages\components\b-workbench\src\components\viewComponents\test2\View.vue
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\viewComponents\operation\View.vue
 -->
 
 <template>
-  <b-card
+  <div
     theme="routine"
     class="accountFundsTransfer"
   >
@@ -41,7 +41,7 @@
       </div>
     </div>
     <!-- </div> -->
-  </b-card>
+  </div>
 </template>
   <script>
   export default {

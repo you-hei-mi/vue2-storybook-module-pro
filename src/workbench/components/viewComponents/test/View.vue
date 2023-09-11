@@ -3,13 +3,13 @@
  * @Version: 1.0
  * @Author: wuxr
  * @Date: 2022-06-10 18:59:06
- * @LastEditTime: 2023-08-21 15:04:30
+ * @LastEditTime: 2023-09-11 18:38:05
  * @LastEditors: Please set LastEditors
- * @FilePath: \k-cbm\packages\components\b-workbench\src\components\viewComponents\test\View.vue
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\viewComponents\test\View.vue
 -->
 
 <template>
-  <b-card
+  <div
     theme="routine"
     class="accountFundsTransfer"
   >
@@ -32,7 +32,7 @@
         />
       </div>
     </div>
-  </b-card>
+  </div>
 </template>
 <script>
 export default {
@@ -116,17 +116,19 @@ export default {
      * 页面跳转
      */
     linkFun (row) {
-      this.$router.push({
-        path: '/investmentAnalysis/ACSetInvestment/index', // 投后账套
-        query: {
-          KeyCode: encodeURIComponent(
-            encodeURIComponent(row.fund ? row.fund : row.code)
-          ), // code
-          KeyName: encodeURIComponent(
-            encodeURIComponent(row.fundName ? row.fundName : row.name)
-          ) // name
+        if(this.$router){
+            this.$router.push({
+              path: '/investmentAnalysis/ACSetInvestment/index', // 投后账套
+              query: {
+                KeyCode: encodeURIComponent(
+                  encodeURIComponent(row.fund ? row.fund : row.code)
+                ), // code
+                KeyName: encodeURIComponent(
+                  encodeURIComponent(row.fundName ? row.fundName : row.name)
+                ) // name
+              }
+            })
         }
-      })
     }
   }
 }

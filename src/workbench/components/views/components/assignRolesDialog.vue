@@ -3,9 +3,9 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2022-05-08 15:41:52
- * @LastEditTime: 2023-08-19 13:35:12
+ * @LastEditTime: 2023-09-11 16:28:39
  * @LastEditors: Please set LastEditors
- * @FilePath: \k-cbm\packages\components\b-workbench\src\components\views\components\assignRolesDialog.vue
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\views\components\assignRolesDialog.vue
 -->
 <template>
   <el-dialog
@@ -114,8 +114,7 @@ export default {
     // 初始化数据
     initData () {
       this.assignRolesFrom.assignRoles = []
-      api
-        .tempListUser({ tempId: this.assignRolesFrom.tempId })
+      api.tempListUser({ tempId: this.assignRolesFrom.tempId })
         .then(({data}) => {
           this.options = data
           for (let i = 0; i < this.options.length; i++) {
@@ -153,5 +152,5 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 </style>

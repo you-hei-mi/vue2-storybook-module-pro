@@ -3,20 +3,16 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2023-08-17 18:16:31
- * @FilePath: /k-cbm/packages/components/b-workbench/src/components/config/defaultConfig.js
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\config\defaultConfig.js
 */
 
 import test from '../viewComponents/test'
 import test2 from '../viewComponents/test2'
-import test3 from '../viewComponents/test3'
 import operation from '../viewComponents/operation'
-import toDoList from '../viewComponents/toDoList'
 let certifiedComponents= {
     test,
     test2,
-    test3,
     operation,
-    toDoList
 }
 
 
@@ -37,17 +33,23 @@ let certifiedComponents= {
 
 
 // -------------------------------------- 下面最好不要动 ----------------------------------------------------------
-const files = require.context('@/app-config/', false, /\workbench-tools.js/)
+const files = require.context('@/', false, /\workbench-tools.js/)
 console.log(files.keys())
 const filedata = files.keys()
 let newdefaultConfig = {}
+
+console.log('filedata', filedata)
 // 判断是否有该文件
 if (filedata.length > 0) {
-  const workbenchTools = require('@/app-config/workbench-tools.js')
-  console.log('workbenchTools', workbenchTools)
-  if (JSON.stringify(workbenchTools) !== '{}') {
-    newdefaultConfig = workbenchTools.default
-  }
+    try {
+        const workbenchTools = require('@/app-config/workbench-tools.js')
+        console.log('workbenchTools', workbenchTools)
+        if (JSON.stringify(workbenchTools) !== '{}') {
+          newdefaultConfig = workbenchTools.default
+        }
+    } catch (error) {
+        console.log('没用发现配置文件')
+    }
 }
 
 let customConfig = newdefaultConfig['componentData'] || {}

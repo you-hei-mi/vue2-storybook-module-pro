@@ -3,9 +3,9 @@
  * @Version: 1.0
  * @Author: zou hua
  * @Date: 2022-05-11 17:38:17
- * @LastEditTime: 2023-08-21 18:25:14
+ * @LastEditTime: 2023-09-11 18:16:30
  * @LastEditors: Please set LastEditors
- * @FilePath: \k-cbm\packages\components\b-workbench\src\components\views\layoutAdmin\preview.vue
+ * @FilePath: \vue2-storybook-module-pro\src\workbench\components\views\layoutAdmin\preview.vue
 -->
 <template>
   <div
@@ -199,15 +199,15 @@
 import ViewGridLayout from '../../components/NestedEditor/ViewGridLayout' // 操作区拖拽组件
 import queryCard from '../../components/queryCard' // 设置卡片属性
 import { panelConfig, componentData, URLConfig, shortcutKey } from '../../config/tools' // 模型默认配置文件
-import { getUUID, detectZoom } from '../../common/js/utils' // 模型默认配置文件
+import { getUUID, detectZoom } from '../../assets/js/utils' // 模型默认配置文件
 import { GridLayout, GridItem } from 'vue-grid-layout'
 import * as api from '@/api/workbench/index' // 接口
 import _ from 'lodash'
 import Vue from 'vue'
-import Carousel from './components/components/Carousel'
+import Carousel from '../components/carousel'
 Vue.use(require('vue-shortkey')) // 快捷键
 export default {
-  name: 'LayoutAdminPreview',
+  name: 'my-workbench-preview',
   components: {
     ViewGridLayout,
     GridLayout,
@@ -409,7 +409,9 @@ export default {
     },
     // 添加组件
     operationFn () {
-      this.$router.push(URLConfig.edit)
+        if(this.$router){
+            this.$router.push(URLConfig.edit)
+        }
     },
     // 操作方法
     operationFn2 (type, data) {
@@ -437,10 +439,12 @@ export default {
     },
     // ------------------------------- 快捷键相关逻辑开始 -------------------------------
     goWorkEdit () {
-      if (this.$route.path !== this.shortcutKey[0].url) {
-        // 前往工作台编辑页面
-        this.$router.push(this.shortcutKey[0].url)
-      }
+        if(this.$route){
+            if (this.$route.path !== this.shortcutKey[0].url) {
+              // 前往工作台编辑页面
+              this.$router.push(this.shortcutKey[0].url)
+            }
+        }
     },
     handleKeyUp (e) {
       const key = window.event.keyCode ? window.event.keyCode : window.event.which
@@ -527,7 +531,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../../common/css/variable.scss";
+@import "../../assets/css/variable.scss";
 
 .preview_workshop,
 .k_workshop {
